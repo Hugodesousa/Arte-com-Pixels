@@ -4,9 +4,16 @@
     
 }
 
-#title {
+header {
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title {
+    margin-top: 45px;
     font-family: 'VT323';
     font-size: 41px;
 }
@@ -46,7 +53,7 @@ p {
 }
 
 #pixel-board {
-    background-color: red;
+    background-color: white;
     border: solid 1px black;
     width: 200px;
     height: 200px;
