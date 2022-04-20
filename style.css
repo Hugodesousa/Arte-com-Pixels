@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');body {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
 #title {
     text-align: center;
     margin-top: 55px;
@@ -14,8 +19,24 @@
 }
 
 #color-palette {
-width: 280px;
+width: 300px;
 margin: auto;
+}
+
+#color1 {
+    background-color: black;
+}
+#color2 {
+    background-color: rgb(158, 1, 1);
+}
+#color3 {
+    background-color: rgb(236, 204, 18);
+}
+#color4 {
+    background-color: rgb(13, 177, 48);
+}
+#color5 {
+    background-color: rgb(23, 90, 177);
 }
 
 p {
@@ -26,6 +47,7 @@ p {
 
 #pixel-board {
     background-color: red;
+    border: solid 1px black;
     width: 200px;
     height: 200px;
     margin: auto;
@@ -50,7 +72,11 @@ p {
     text-align: center;
 }
 #footer {
-    
+    background-color: red;
     margin: auto;
-    width: 1366;
+    width: 1366px;
+}
+img {
+    margin: auto;
+    width: 1366px; 
 }
