@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+#title {
+    text-align: center;
+    margin-top: 55px;
+    font-family: 'VT323';
+    font-size: 41px;
+}
+.color {
+    margin: 5px;
+    display: inline-block;
+    border: solid 1px black;
+    height: 40px;
+    width: 40px;
+}
+
+#color-palette {
+width: 280px;
+margin: auto;
+}
+
+p {
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 35px;
+}
+
+#pixel-board {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
