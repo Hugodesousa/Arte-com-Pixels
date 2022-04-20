@@ -29,4 +29,28 @@ p {
     width: 200px;
     height: 200px;
     margin: auto;
+
+}
+
+#clear-board {
+    margin: auto;
+    padding: 20px;
+    font-family: 'VT323';
+    font-size: 25px;
+    margin-top: 25px;
+    text-align: center;
+    margin-top: 80px;
+
+}
+.buton {
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    width: 1366px;
+    text-align: center;
+}
+#footer {
+    
+    margin: auto;
+    width: 1366;
 }
