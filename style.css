@@ -28,7 +28,7 @@ margin: auto;
     width: 40px;    
 }
 
-#color1 {
+/* #color1 {
     background-color: black;
 }
 #color2 {
@@ -39,10 +39,8 @@ margin: auto;
 }
 #color4 {
     background-color: rgb(13, 177, 48);
-}
-#color5 {
-    background-color: rgb(23, 90, 177);
-}
+} */
+
 
 p {
     text-align: center;
