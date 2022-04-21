@@ -26,15 +26,15 @@ function creatPixel() {
     const pixel = document.createElement('div');
     board.appendChild(pixel);
     pixel.classList.add('pixel');
-    console.log(pixel);
   }
 }
-
+// eslint-disable-next-line sonarjs/no-use-of-empty-return-value
 window.onload = creatPixel();
 
-// const pixel = document.querySelector('.pixel');
-// //console.log(pixel);
-// function selectPixel() {
+const pix = document.getElementsByClassName('pixel');
+function color() {
+  
+  console.log(pix)
 
-// }
-// pixel.addEventListener('click', selectPixel);
+}
+ board.addEventListener('click', color)
