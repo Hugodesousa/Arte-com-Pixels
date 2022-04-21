@@ -1,33 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');body {
     padding: 0px;
-    margin: 0px;
-    
+    margin: 0px;    
 }
 
 header {
-    justify-content: center;
-    align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 #title {
-    margin-top: 45px;
+    margin-top: 20px;
     font-family: 'VT323';
-    font-size: 41px;
-}
-.color {
-    margin: 5px;
-    display: inline-block;
-    border: solid 1px black;
-    height: 40px;
-    width: 40px;
+    font-size: 35px;
 }
 
 #color-palette {
 width: 300px;
 margin: auto;
+}
+
+.color {
+    margin: 3px;
+    display: inline-block;
+    border: solid 1px black;
+    height: 40px;
+    width: 40px;    
 }
 
 #color1 {
@@ -49,41 +47,60 @@ margin: auto;
 p {
     text-align: center;
     font-family: 'VT323';
-    font-size: 35px;
+    font-size: 30px;
 }
 
-#pixel-board {
-    background-color: white;
-    border: solid 1px black;
-    width: 200px;
-    height: 200px;
+.buton {
+    display: block;
     margin: auto;
-
+    text-align: center;
 }
 
 #clear-board {
     margin: auto;
-    padding: 20px;
+    padding: 5px;
     font-family: 'VT323';
-    font-size: 25px;
-    margin-top: 25px;
+    font-size: 22px;
+    margin-top: 0px;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
+    color: white;
+    background-color: black;
+}
 
-}
-.buton {
-    display: block;
+#pixel-board {
+    background-color: rgb(255, 255, 255);
+    /* border: solid 1px black; */
+    width: 210px;
+    height: 210px;
     margin: auto;
-    width: 1366px;
-    text-align: center;
+    display: flex;    
 }
+
+.pixel {
+    border: solid 1px black;
+    background-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;  
+    display: flex;
+    margin: 0px;
+}
+
+/* .column {
+    
+    
+} */
+
 #footer {
-    background-color: red;
     margin: auto;
-    width: 1366px;
 }
+
 img {
     margin: auto;
-    width: 1366px; 
+    position: fixed;
+    max-width: 1330px; 
 }
+
+
+
+
