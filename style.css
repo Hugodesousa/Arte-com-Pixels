@@ -71,12 +71,16 @@ p {
 }
 
 #pixel-board {
-    background-color: rgb(255, 255, 255);
+    
     /* border: solid 1px black; */
-    width: 210px;
+    width: 250px;
     height: 210px;
     margin: auto;
-    display: flex;    
+    display: flex;   
+    justify-content: center;
+    flex-wrap: wrap; 
+    align-items: center;
+    
 }
 
 .pixel {
@@ -84,8 +88,8 @@ p {
     background-color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;  
-    display: flex;
     margin: 0px;
+    
 }
 
 /* .column {

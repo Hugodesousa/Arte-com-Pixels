@@ -19,9 +19,22 @@ button2.addEventListener('click', selectColor);
 button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
 
-const pixel = document.querySelector('.pixel');
-//console.log(pixel);
-function selectPixel() {
+const board = document.getElementById('pixel-board');
 
+function creatPixel() {
+  for (let index = 0; index < 25; index += 1) {
+    const pixel = document.createElement('div');
+    board.appendChild(pixel);
+    pixel.classList.add('pixel');
+    console.log(pixel);
+  }
 }
-pixel.addEventListener('click', selectPixel);
+
+window.onload = creatPixel();
+
+// const pixel = document.querySelector('.pixel');
+// //console.log(pixel);
+// function selectPixel() {
+
+// }
+// pixel.addEventListener('click', selectPixel);
