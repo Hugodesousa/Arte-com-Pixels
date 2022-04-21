@@ -18,3 +18,10 @@ button1.addEventListener('click', selectColor);
 button2.addEventListener('click', selectColor);
 button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
+
+const pixel = document.querySelector('.pixel');
+//console.log(pixel);
+function selectPixel() {
+
+}
+pixel.addEventListener('click', selectPixel);
