@@ -5,10 +5,19 @@ const button3 = document.getElementById('color3');
 const button4 = document.getElementById('color4');
 const clear = document.getElementById('clear-board');
 // Determina cores da palheta.
+const r = Math.floor(Math.random() * 255); const g = Math.floor(Math.random() * 255);
+const b = Math.floor(Math.random() * 255);
+
+const r2 = Math.floor(Math.random() * 255); const g2 = Math.floor(Math.random() * 255);
+const b2 = Math.floor(Math.random() * 255);
+
+const r3 = Math.floor(Math.random() * 255); const g3 = Math.floor(Math.random() * 255);
+const b3 = Math.floor(Math.random() * 255);
+
 button1.style.backgroundColor = 'rgb(0, 0, 0)';
-button2.style.backgroundColor = 'rgb(158, 1, 20)';
-button3.style.backgroundColor = 'rgb(236, 204, 18)';
-button4.style.backgroundColor = 'rgb(13, 177, 48)';
+button2.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+button3.style.backgroundColor = `rgb(${r2}, ${g2}, ${b2})`;
+button4.style.backgroundColor = `rgb(${r3}, ${g3}, ${b3})`;
 // Adiciona clase selected a primeira cor
 button1.classList.add('selected');
 // Remove  a classe selected e adiciona a mesma na cor selecionada.
