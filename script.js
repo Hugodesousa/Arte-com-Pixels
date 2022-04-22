@@ -4,11 +4,13 @@ const button2 = document.getElementById('color2');
 const button3 = document.getElementById('color3');
 const button4 = document.getElementById('color4');
 const clear = document.getElementById('clear-board');
+const palheta = document.getElementById('color-palette');
 // Determina cores da palheta.
 button1.style.backgroundColor = 'rgb(0, 0, 0)';
 button2.style.backgroundColor = 'rgb(158, 1, 20)';
 button3.style.backgroundColor = 'rgb(236, 204, 18)';
 button4.style.backgroundColor = 'rgb(13, 177, 48)';
+// Adiciona clase selected a primeira cor
 button1.classList.add('selected');
 // remove  a classe selected e adiciona a mesma na cor selecionada.
 function selectColor(Event) {
@@ -40,18 +42,20 @@ window.onload = creatPixel();
 // Adiciona cor ao pixel clicado.
 //
 
+
 const px0 = document.querySelectorAll('.pixel');
-for (let i = 0; i < px0.length; i += 1){
-  px0[i].addEventListener('click',function seler (){
-    px0[i].style.backgroundColor = 'red';
-  })
+for (let i = 0; i < px0.length; i += 1) {
+  px0[i].addEventListener('click', () => {
+    const teste = document.querySelector('.selected');
+    px0[i].style.backgroundColor = teste.style.backgroundColor;
+  });
 }
-console.log(clear);
 
 // Funçaão para limpar board.
-function cle(){
-  for (let i = 0; i < px0.length; i += 1){
-  px0[i].style.backgroundColor = 'white'
+function limpar() {
+  for (let i = 0; i < px0.length; i += 1) {
+    px0[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
-clear.addEventListener('click', cle);
+clear.addEventListener('click', limpar);
+
