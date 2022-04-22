@@ -2,24 +2,20 @@
     padding: 0px;
     margin: 0px;    
 }
-
 header {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-
 #title {
     margin-top: 20px;
     font-family: 'VT323';
     font-size: 35px;
 }
-
 #color-palette {
 width: 300px;
 margin: auto;
 }
-
 .color {
     margin: 3px;
     display: inline-block;
@@ -27,25 +23,6 @@ margin: auto;
     height: 40px;
     width: 40px;    
 }
-
-/* .selected {
-    transform: translateY(-5px);
-} */
-
-/* #color1 {
-    background-color: black;
-}
-#color2 {
-    background-color: rgb(158, 1, 1);
-}
-#color3 {
-    background-color: rgb(236, 204, 18);
-}
-#color4 {
-    background-color: rgb(13, 177, 48);
-} */
-
-
 p {
     text-align: center;
     font-family: 'VT323';
@@ -57,7 +34,6 @@ p {
     margin: auto;
     text-align: center;
 }
-
 #clear-board {
     margin: auto;
     padding: 5px;
@@ -70,37 +46,25 @@ p {
     background-color: black;
 }
 
-#pixel-board {
-    
-    /* border: solid 1px black; */
+#pixel-board {    
     width: 250px;
     height: 210px;
     margin: auto;
     display: flex;   
     justify-content: center;
     flex-wrap: wrap; 
-    align-items: center;
-    
+    align-items: center;  
 }
-
 .pixel {
     border: solid 1px black;
     background-color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;  
-    margin: 0px;
-    
+    margin: 0px;  
 }
-
-/* .column {
-    
-    
-} */
-
 #footer {
     margin: auto;
 }
-
 img {
     margin: auto;
     position: fixed;
