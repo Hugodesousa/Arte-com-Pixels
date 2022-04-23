@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');body {
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); 
+body {
     padding: 0px;
     margin: 0px;    
 }
@@ -47,13 +48,13 @@ p {
 }
 
 #pixel-board {    
-    width: 250px;
-    height: 210px;
+    /* width: 250px;
+    height: 210px; */
     margin: auto;
-    display: flex;   
+    display:flex;   
     justify-content: center;
-    flex-wrap: wrap; 
     align-items: center;  
+    ;
 }
 .pixel {
     border: solid 1px black;
@@ -63,14 +64,19 @@ p {
     margin: 0px;  
 }
 #footer {
+    justify-content: center;
     margin: auto;
+    display: flex; 
 }
 img {
     margin: auto;
     position: fixed;
-    max-width: 1330px; 
+    max-width: 1330px;
+    display: flex; 
+}   
+.selected {
+    box-shadow: 2px -2px 1em rgb(0, 0, 0);
 }
-
 
 
 

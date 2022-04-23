@@ -25,6 +25,7 @@ function selectColor(Event) {
   const cor = document.querySelector('.selected');
   cor.classList.remove('selected');
   Event.target.classList.add('selected');
+  console.log(Event.target);
 }
 button1.addEventListener('click', selectColor);
 button2.addEventListener('click', selectColor);
@@ -32,16 +33,25 @@ button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
 // Cria as divs para represeratam os pixel a serem coloridos ( adiciona uma classa para todas as divs e um id para cada pixel).
 const board = document.getElementById('pixel-board');
-function creatPixel() {
-  for (let index = 0; index < 25; index += 1) {
-    const pixel = document.createElement('div');
-    board.appendChild(pixel);
-    pixel.classList.add('pixel');
-    pixel.id = `px${index}`;
+function creatLine() {
+  for (let i = 0; i < 5; i += 1) {
+    const line = document.createElement('div');
+    board.appendChild(line);
+    //line.classList.add('pixel')
+    function creatPixel() {
+      for (let index = 0; index < 5; index += 1) {
+        const pixel = document.createElement('div');
+        line.appendChild(pixel);
+        pixel.classList.add('pixel');
+        // pixel.id = `px${index}`;
+      }
+    }
+    creatPixel();
   }
 }
+
 // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
-window.onload = creatPixel();
+window.onload = creatLine();
 // Adiciona cor ao pixel clicado.
 //
 const px0 = document.querySelectorAll('.pixel');
@@ -49,6 +59,16 @@ for (let i = 0; i < px0.length; i += 1) {
   px0[i].addEventListener('click', () => {
     const teste = document.querySelector('.selected');
     px0[i].style.backgroundColor = teste.style.backgroundColor;
+  });
+}
+// levanta o pixel a pasar ao mouse
+const px = document.querySelectorAll('.pixel');
+for (let i = 0; i < px.length; i += 1) {
+  px[i].addEventListener('mouseover', () => {
+    px0[i].style.transform = 'translateY(-3px)';
+  });
+  px[i].addEventListener('mouseout', () => {
+    px0[i].style.transform = 'translateY(0px)';
   });
 }
 // Funçaão para limpar board.
