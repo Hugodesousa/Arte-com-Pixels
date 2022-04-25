@@ -25,40 +25,53 @@ function selectColor(Event) {
   const cor = document.querySelector('.selected');
   cor.classList.remove('selected');
   Event.target.classList.add('selected');
-  console.log(Event.target);
 }
 button1.addEventListener('click', selectColor);
 button2.addEventListener('click', selectColor);
 button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
-// Cria as divs para represeratam os pixel a serem coloridos ( adiciona uma classa para todas as divs e um id para cada pixel).
+
+
+// Função para inserir tamanho do quadro.
+
+const boardSize = document.querySelector('#generate-board');
+const valor = document.querySelector('#board-size');
+let numero = 5;
+function size() {
+  const px = document.querySelectorAll('.pixel');
+  numero = valor.value;
+  for (let index = 0; px.length; index += 1) {
+    px[index].remove();
+  }
+  creatLine(numero);
+};
+
+// Cria as divs para represeratam os pixel a serem coloridos ( adiciona uma classa para todas as divs).
+
 const board = document.getElementById('pixel-board');
-function creatLine() {
-  for (let i = 0; i < 5; i += 1) {
+function creatLine(numero) {
+  for (let i = 1; i <= numero; i += 1) {
     const line = document.createElement('div');
     board.appendChild(line);
-    //line.classList.add('pixel')
-    function creatPixel() {
-      for (let index = 0; index < 5; index += 1) {
-        const pixel = document.createElement('div');
-        line.appendChild(pixel);
-        pixel.classList.add('pixel');
-        // pixel.id = `px${index}`;
-      }
+    line.classList.add('line');
+    for (let index = 0; index < numero; index += 1) {
+      const pixel = document.createElement('div');
+      line.appendChild(pixel);
+      pixel.classList.add('pixel');
     }
-    creatPixel();
   }
 }
+creatLine(5);
+boardSize.addEventListener('click', size);
 
-// eslint-disable-next-line sonarjs/no-use-of-empty-return-value
-window.onload = creatLine();
+
 // Adiciona cor ao pixel clicado.
 //
 const px0 = document.querySelectorAll('.pixel');
 for (let i = 0; i < px0.length; i += 1) {
   px0[i].addEventListener('click', () => {
-    const teste = document.querySelector('.selected');
-    px0[i].style.backgroundColor = teste.style.backgroundColor;
+    const colorSelected = document.querySelector('.selected');
+    px0[i].style.backgroundColor = colorSelected.style.backgroundColor;
   });
 }
 // levanta o pixel a pasar ao mouse
@@ -71,6 +84,7 @@ for (let i = 0; i < px.length; i += 1) {
     px0[i].style.transform = 'translateY(0px)';
   });
 }
+
 // Funçaão para limpar board.
 function limpar() {
   for (let i = 0; i < px0.length; i += 1) {

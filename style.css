@@ -28,12 +28,19 @@ p {
     text-align: center;
     font-family: 'VT323';
     font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .buton {
-    display: block;
+    display:grid;
     margin: auto;
     text-align: center;
+}
+.input {
+   width: 160px;
+   margin: auto;
+   margin-bottom: 10px; 
 }
 #clear-board {
     margin: auto;
@@ -46,22 +53,27 @@ p {
     color: white;
     background-color: black;
 }
-
 #pixel-board {    
     /* width: 250px;
     height: 210px; */
     margin: auto;
-    display:flex;   
+    
+    display: inline-block;
+    /* display:flex;   
     justify-content: center;
-    align-items: center;  
+    align-items: center;   */
     ;
+}
+.line {
+    margin-bottom: -5px;
 }
 .pixel {
     border: solid 1px black;
     background-color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;  
-    margin: 0px;  
+    margin: auto;  
+    display: inline-block
 }
 #footer {
     justify-content: center;
@@ -70,13 +82,12 @@ p {
 }
 img {
     margin: auto;
-    position: fixed;
+    
     max-width: 1330px;
     display: flex; 
 }   
 .selected {
     box-shadow: 2px -2px 1em rgb(0, 0, 0);
 }
-
 
 
