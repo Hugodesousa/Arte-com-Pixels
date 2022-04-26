@@ -31,7 +31,6 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .buton {
     display:inline;
     margin: auto;
@@ -86,5 +85,3 @@ img {
 .selected {
     box-shadow: 2px -2px 1em rgb(0, 0, 0);
 }
-
-
