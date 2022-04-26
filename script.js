@@ -32,7 +32,7 @@ button2.addEventListener('click', selectColor);
 button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
 
-// Criar boarinicial com 5 quadros.
+// Criar boar inicial com 5 quadros.
 const board = document.getElementById('pixel-board');
 function creatLine(numero) {
   for (let i = 1; i <= numero; i += 1) {
@@ -53,13 +53,21 @@ const boardSize = document.querySelector('#generate-board');
 function size() {
   const valor = document.querySelector('#board-size');
   const px = document.querySelectorAll('.pixel');
-  const numero = valor.value;
+  let numero = valor.value;
+  if (numero === '') {
+    alert('Board inválido!');
+  } else if (numero < 5) {
+    numero = 5;
+  } else if (numero > 50) {
+    numero = 50;
+  }
   for (let index = 0; index < px.length; index += 1) {
     px[index].remove();
   }
   creatLine(numero);
   adcCor();
 }
+
 boardSize.addEventListener('click', size);
 // Adiciona cor ao pixel clicado.
 //
