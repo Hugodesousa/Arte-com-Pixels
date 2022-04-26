@@ -4,6 +4,7 @@ const button2 = document.getElementById('color2');
 const button3 = document.getElementById('color3');
 const button4 = document.getElementById('color4');
 const clear = document.getElementById('clear-board');
+
 // Determina cores da palheta.
 const r = Math.floor(Math.random() * 255); const g = Math.floor(Math.random() * 255);
 const b = Math.floor(Math.random() * 255);
@@ -31,23 +32,7 @@ button2.addEventListener('click', selectColor);
 button3.addEventListener('click', selectColor);
 button4.addEventListener('click', selectColor);
 
-
-// Função para inserir tamanho do quadro.
-
-const boardSize = document.querySelector('#generate-board');
-const valor = document.querySelector('#board-size');
-let numero = 5;
-function size() {
-  const px = document.querySelectorAll('.pixel');
-  numero = valor.value;
-  for (let index = 0; px.length; index += 1) {
-    px[index].remove();
-  }
-  creatLine(numero);
-};
-
-// Cria as divs para represeratam os pixel a serem coloridos ( adiciona uma classa para todas as divs).
-
+// Criar boarinicial com 5 quadros.
 const board = document.getElementById('pixel-board');
 function creatLine(numero) {
   for (let i = 1; i <= numero; i += 1) {
@@ -62,31 +47,47 @@ function creatLine(numero) {
   }
 }
 creatLine(5);
+
+// Função para inserir tamanho do quadro.
+const boardSize = document.querySelector('#generate-board');
+function size() {
+  const valor = document.querySelector('#board-size');
+  const px = document.querySelectorAll('.pixel');
+  const numero = valor.value;
+  for (let index = 0; index < px.length; index += 1) {
+    px[index].remove();
+  }
+  creatLine(numero);
+  adcCor();
+}
 boardSize.addEventListener('click', size);
-
-
 // Adiciona cor ao pixel clicado.
 //
-const px0 = document.querySelectorAll('.pixel');
-for (let i = 0; i < px0.length; i += 1) {
-  px0[i].addEventListener('click', () => {
-    const colorSelected = document.querySelector('.selected');
-    px0[i].style.backgroundColor = colorSelected.style.backgroundColor;
-  });
+function adcCor() {
+  const px0 = document.querySelectorAll('.pixel');
+  for (let i = 0; i < px0.length; i += 1) {
+    px0[i].addEventListener('click', () => {
+      const colorSelected = document.querySelector('.selected');
+      px0[i].style.backgroundColor = colorSelected.style.backgroundColor;
+    });
+  }
 }
+adcCor();
 // levanta o pixel a pasar ao mouse
-const px = document.querySelectorAll('.pixel');
-for (let i = 0; i < px.length; i += 1) {
-  px[i].addEventListener('mouseover', () => {
-    px0[i].style.transform = 'translateY(-3px)';
-  });
-  px[i].addEventListener('mouseout', () => {
-    px0[i].style.transform = 'translateY(0px)';
-  });
-}
+// const px = document.querySelectorAll('.pixel');
+// for (let i = 0; i < px.length; i += 1) {
+//   px[i].addEventListener('mouseover', () => {
+//     px0[i].style.transform = 'translateY(-3px)';
+//   });
+//   px[i].addEventListener('mouseout', () => {
+//     px0[i].style.transform = 'translateY(0px)';
+//   });
+// }
 
 // Funçaão para limpar board.
+
 function limpar() {
+  px0 = document.querySelectorAll('.pixel');
   for (let i = 0; i < px0.length; i += 1) {
     px0[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }

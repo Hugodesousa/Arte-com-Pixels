@@ -33,9 +33,10 @@ p {
 }
 
 .buton {
-    display:grid;
+    display:inline;
     margin: auto;
     text-align: center;
+    
 }
 .input {
    width: 160px;
@@ -52,17 +53,12 @@ p {
     margin-bottom: 15px;
     color: white;
     background-color: black;
+    display: flex;
 }
 #pixel-board {    
-    /* width: 250px;
-    height: 210px; */
     margin: auto;
-    
-    display: inline-block;
-    /* display:flex;   
-    justify-content: center;
-    align-items: center;   */
-    ;
+    display: block;
+    text-align: center;
 }
 .line {
     margin-bottom: -5px;
@@ -78,13 +74,14 @@ p {
 #footer {
     justify-content: center;
     margin: auto;
-    display: flex; 
+    display: inline; 
 }
 img {
     margin: auto;
     
     max-width: 1330px;
-    display: flex; 
+    display: block; 
+    
 }   
 .selected {
     box-shadow: 2px -2px 1em rgb(0, 0, 0);

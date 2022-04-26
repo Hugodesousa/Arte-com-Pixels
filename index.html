@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,38 @@
     <title>Paleta de Cores</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <header>
             <h1 id="title">Paleta de Cores</h1>
-        
+
             <section id="color-palette">
-                <button class='color' class='color1' id='color1' ></button>
-                <button class='color' class='color2' id='color2' ></button>
-                <button class='color' class='color3' id='color3' ></button>
-                <button class='color' class='color4' id='color4' ></button>
+                <button class='color' class='color1' id='color1'></button>
+                <button class='color' class='color2' id='color2'></button>
+                <button class='color' class='color3' id='color3'></button>
+                <button class='color' class='color4' id='color4'></button>
                 <!-- <button class='color' id='color5' ></button> -->
             </section>
             <p>Solte sua criatividade\o/</p>
         </header>
-            <div class="buton"> 
-                <div>
+        <div class="buton">
+            <div> 
+                <input type="number" name="Tamanho do board" min="5" max="50" class="input" id="board-size">
                 <button id="generate-board">VQV</button>
-                <input type="number" name="Tamanho do board" min="5" max="50" class="input" id="board-size" >
-                </div>
-                <button id="clear-board">Limpar</button>
+                
             </div>
-            <section id="pixel-board">
-            </section>
-    </main>        
-            <footer id="footer">
-                <img src="img/Sem título.png" alt="">
-            </footer>
-    
-    <script type ="text/javascript" src="script.js"></script>
+        
+        </div>
+        <button id="clear-board">Limpar</button> 
+        <section id="pixel-board">
+        </section>
+    </main>
+    <footer id="footer">
+        <img src="img/Sem título.png" alt="">
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
