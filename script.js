@@ -58,8 +58,8 @@ function size() {
     alert('Board inválido!');
   } else if (numero < 5) {
     numero = 5;
-  } else if (numero > 50) {
-    numero = 50;
+  } else if (numero > 32) {
+    numero = 32;
   }
   for (let index = 0; index < px.length; index += 1) {
     px[index].remove();
