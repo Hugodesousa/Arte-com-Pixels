@@ -3,9 +3,8 @@
 # Contexto
  
 Este projeto trata-se uma página com HTML, CSS e JavaScript puros, foram implementadas funcionalidades para criar um board de pintura com pixel onde o usuário define o tamanho do board e tem 4 cores geradas aleatoriamente à disposição para soltar a criatividade.
-##
+#
 [Acesse o site aqui.](https://hugodesousa.github.io/Arte-com-Pixels/)
-# 
 
 ## Tecnologias usadas
 
@@ -15,10 +14,10 @@ Front-end:
 #
 ## Executando aplicação
  
-* Para o abrir o site direto no navegador:
+* Para o site direto no navegador:
  
  ```
- https://hugodesousa.github.io/Arte-com-Pixels/
+  https://hugodesousa.github.io/Arte-com-Pixels/ 
  ```
 * Para rodar em uma máquina local
  
