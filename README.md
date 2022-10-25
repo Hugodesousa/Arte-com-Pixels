@@ -13,7 +13,7 @@ Front-end:
 #
 ## Executando aplicação
  
-* Para o site direto no navegador:
+* Para o abrir o site direto no navegador:
  
  ```
  https://hugodesousa.github.io/Arte-com-Pixels/
